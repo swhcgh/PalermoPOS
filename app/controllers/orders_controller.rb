@@ -51,6 +51,8 @@ class OrdersController < ApplicationController
     elsif crit == "zip"
       @results = Customer.where("Zip like ?", "%#{c}%")
     end
+    
+    puts @results
   end
   
   def pending
